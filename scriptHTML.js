@@ -1,12 +1,4 @@
 
-window.addEventListener("load", () => {
-  const sounds = document.querySelectorAll(".sound");
-
-  dogInput.addEventListener('click', () function(){
-    sounds[0].currentTime = 0;
-    sounds[0].play();
-  });
-});
 
 function alertName() {
   var name = window.prompt("Enter your name: ");
@@ -40,10 +32,17 @@ window.onclick = function(e) {
   }
 }
 
+/* for Pink Lemonade audio*/
+window.onload = function() {
+    var audio = document.getElementById("pinkLemonade");
+    audio.play();
+}
+
 /* For DOGGITAP!!! */
 var countTaps = 0;
 var loveLevel = 0;
 function dogInput() {
+  play();
   countTaps++;
   // DogLoveLevel increase by 0-9 %
   var increment = Math.floor(Math.random()*10);
@@ -57,7 +56,6 @@ function dogInput() {
   document.getElementById("dogLoveLabel").innerHTML =
   "Woof! Woof! The dog's love level is at " + loveLevel + "%!";
 }
-
 function dogMessage() {
   // randNum to determine the message
   var randNum = Math.round(Math.random()*5);
@@ -65,7 +63,7 @@ function dogMessage() {
   switch (randNum) {
     case 0:
       message = "The dog just died for " +
-      Math.round(Math.random()*1000)/1000 + " seconds from an orgasm."
+      Math.round(Math.random()*1000)/1000 + " seconds from feeling too amazing."
       break;
     case 1:
       message = "\"PET ME MORE!!!\" says the doggi."
@@ -84,7 +82,10 @@ function dogMessage() {
   }
   alert(message);
 }
-
+function play() {
+    var audio = document.getElementById("dogSound");
+    audio.play();
+}
 /* Calculator */
 function calculator() {
   var num1 = parseInt(document.getElementById("num1"));
