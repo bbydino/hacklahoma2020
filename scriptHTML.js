@@ -31,18 +31,14 @@ window.onclick = function(e) {
     }
   }
 }
-
-/* for Pink Lemonade audio*/
-window.onload = function() {
-    var audio = document.getElementById("pinkLemonade");
-    audio.play();
+function playPink() {
+  play("pinkLemonade");
 }
-
 /* For DOGGITAP!!! */
 var countTaps = 0;
 var loveLevel = 0;
 function dogInput() {
-  play();
+  play("dogSound");
   countTaps++;
   // DogLoveLevel increase by 0-9 %
   var increment = Math.floor(Math.random()*10);
@@ -82,8 +78,8 @@ function dogMessage() {
   }
   alert(message);
 }
-function play() {
-    var audio = document.getElementById("dogSound");
+function play(str) {
+    var audio = document.getElementById(str);
     audio.play();
 }
 /* Calculator */
