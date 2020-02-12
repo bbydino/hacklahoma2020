@@ -2,7 +2,7 @@
 
 function alertName() {
   var name = window.prompt("Enter your name: ");
-  alert("Your name is " + name);
+  alert("Sup " + name + "! Your name is " + name);
 }
 
 function titleButton() {
@@ -58,7 +58,7 @@ function dogMessage() {
   var message = "";
   switch (randNum) {
     case 0:
-      message = "The dog just died for " +
+      message = "The doggi just died for " +
       Math.round(Math.random()*1000)/1000 + " seconds from feeling too amazing."
       break;
     case 1:
@@ -74,7 +74,7 @@ function dogMessage() {
       message = "The doggi is staring into your soul.";
       break;
     default:
-      message = "The dog stares contemptly.";
+      message = "The doggi stares contemptly.";
   }
   alert(message);
 }
@@ -84,23 +84,24 @@ function play(str) {
 }
 /* Calculator */
 function calculator() {
-  var num1 = parseInt(document.getElementById("num1"));
-  var num2 = parseInt(document.getElementById("num1"));
+  var num1 = Number.parseInt(document.getElementById("num1"));
+  var num2 = Number.parseInt(document.getElementById("num1"));
   var op = $("input[name=op]:checked").val();
-
+  var answer = document.getElementById("calcAnswer");
+  
   if (op == "plus") {
-    document.getElementById("calcAnswer").innerHTML = "Answer: " + (num1 + num2);
+    answer.innerHTML = "Answer: " + (num1 + num2);
   }
   else if (op == "minus") {
-    document.getElementById("calcAnswer").innerHTML = "Answer: " + (num1 - num2);
+    answer.innerHTML = "Answer: " + (num1 - num2);
   }
   else if (op == "divide") {
-    document.getElementById("calcAnswer").innerHTML = "Answer: " + (num1 / num2);
+    answer.innerHTML = "Answer: " + (num1 / num2);
   }
   else if (op == "multiply") {
-    document.getElementById("calcAnswer").innerHTML = "Answer: " + (num1 * num2);
+    answer.innerHTML = "Answer: " + (num1 * num2);
   }
   else if (op == "modulus") {
-    document.getElementById("calcAnswer").innerHTML = "Answer: " + (num1 % num2);
+    answer.innerHTML = "Answer: " + (num1 % num2);
   }
 }

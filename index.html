@@ -45,13 +45,16 @@
         Number1: <input type="number" step="0.001" name="num1" id="num1"><br>
         Number2: <input type="number" step="0.001" name="num2" id="num2"><br>
         Operator: <br>
-        +<input type="radio" name="op" id="plus" value="plus"><br>
-        -<input type="radio" name="op" id="minus" value="minus"><br>
-        /<input type="radio" name="op" id="divide" value="divide"><br>
-        *<input type="radio" name="op" id="multiply" value="multiply"><br>
-        %<input type="radio" name="op" id= "modulus" value="modulus"><br>
-        <button type="button" onclick="calculator()">
-        Caculate!</button>
+        <table class="ops">
+          <tr>
+            <td>+<input type="radio" name="op" id="plus" value="plus"></td>
+            <td>-<input type="radio" name="op" id="minus" value="minus"></td>
+            <td>/<input type="radio" name="op" id="divide" value="divide"></td>
+            <td>*<input type="radio" name="op" id="multiply" value="multiply"></td>
+            <td>%<input type="radio" name="op" id= "modulus" value="modulus"></td>
+          </tr>
+        </table>
+        <button type="button" onclick="calculator()">Calculate!</button>
         <br>
         <h2 id="calcAnswer">Answer:</h2>
       </div>
